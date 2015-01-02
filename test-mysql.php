@@ -12,6 +12,6 @@ $mysql->connect();
 $query = "SELECT * FROM `municipios` LIMIT 10";
 $mysql->run($query);
 
-while($row = $mysql->result->fetch_assoc()){
-    echo $row['municipio'];
+while($row = $mysql->result->fetch_object()){
+    echo $row->municipio;
 }
