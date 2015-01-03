@@ -13,5 +13,5 @@ $query = "SELECT * FROM `municipios` LIMIT 10";
 $mysql->run($query);
 
 while($row = $mysql->result->fetch_object()){
-    echo $row->municipio;
+    echo "{$row->municipio}<br>";
 }

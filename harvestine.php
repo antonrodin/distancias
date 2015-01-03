@@ -1,20 +1,8 @@
 <?php
 
-/* 
- * Anton Zekeriev Rodin
- * Check Haversine Formula
- * Basado en ESTO: http://www.taringa.net/posts/hazlo-tu-mismo/14270601/PHP-Calcular-distancia-entre-dos-coordenadas.html
- */
-
-//Test Distances
-// Madrid, Barcelona, Valencia
-// Latitud, Longitud
-$madrid = array(40.4166909, -3.7003454);
-$barcelona = array(41.387917, 2.1699187);
-$valencia = array(39.4702393, -0.3768049);
-$moscu = array(55.750668, 37.632688);
-
 /**
+ * Haversine Formula
+ * Basado en ESTO: http://www.taringa.net/posts/hazlo-tu-mismo/14270601/PHP-Calcular-distancia-entre-dos-coordenadas.html
  * Formula para sacar distancia entre dos puntos dada la latitud y longitud de dos puntos.
  * Esta distancia tiene que estar dada en notación DECIMAL y no en SEXADECIMAL (Grados, minutos... etc)
  * @param type $latitud 1
@@ -45,7 +33,3 @@ function harvestine($lat1, $long1, $lat2, $long2){
 
     return round(($dd * $km), 2);
 }
-
-echo harvestine($madrid[0], $madrid[1], $barcelona[0], $barcelona[1]);
-echo "<br>";
-echo harvestine($madrid[0], $madrid[1], $moscu[0], $moscu[1]);
